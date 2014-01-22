@@ -35,5 +35,8 @@ var kattegat = require("./index")(app);
 app.use(kattegat.store());
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('Kattegat barebones is listening on port ' + app.get('port'));
+  console.log('Kattegat barebones server has started; you can access it from one of these addresses');
+  kattegat.util.hintUrls(app.get('port'));
+  console.log("\nTo access your server from another device, make sure it's on the same network.")
+
 });
