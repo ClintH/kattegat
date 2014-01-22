@@ -4,11 +4,13 @@ Kattegat is a simple application server designed to make prototyping Javascript-
 
 It is developed for the Designing Interactive Artifacts course at the IT University of Copenhagen.
 
+Please note that the server is not designed with any kind of access control. Use a firewall to restrict connections, and only run the server when you need it. It should NOT be used for any kind of production purposes.
+
 ## Main features
 
 * Application server for serving static resources such as HTML, JS, CSS and images (and the use of pre-processors like Jade and Stylus if you like)
 * Persistent storage of small amounts of data, and basic query capabilities (via [nedb](https://github.com/louischatriot/nedb))
-* TODO: Simple realtime WebSocket data exchange (via [Socket.io](http://socket.io))
+* Simple realtime WebSocket data exchange (via [Socket.io](http://socket.io))
 * TODO: Arduino interfacing (via [Breakout.js](http://breakoutjs.com))
 * TODO: Phidget interfacing
 
