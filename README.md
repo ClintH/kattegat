@@ -1,6 +1,6 @@
 # Welcome
 
-Kattegat is a simple application server designed to make prototyping Javascript-based interactivity a bit smoother, yet without hiding too much of the real workings.
+Kattegat is a simple application server designed to make prototyping Javascript-based interactivity a bit smoother, yet without hiding too much of the real workings. <a href="#install">Install Kattegat</a> and play with the demos, or <a href="https://github.com/ClintH/kattegat/blob/master/DOCS.md">read the documentation</a>.
 
 It is developed for the Designing Interactive Artifacts course at the IT University of Copenhagen.
 
@@ -14,54 +14,83 @@ Please note that the server is not designed with any kind of access control. Use
 * TODO: Arduino interfacing (via [Breakout.js](http://breakoutjs.com))
 * TODO: Phidget interfacing
 
-# Getting started
+# <a name="install"></a> Getting started
 
-This assumes you've already run the [Kattegat generator](https://github.com/ClintH/generator-kattegat). Do this first if you haven't.
+This assumes you've already run the [Kattegat generator](https://github.com/ClintH/generator-kattegat). Do this step first.
 
 `BASE\public` is where you should place all your client-side HTML, Javascript, CSS, images and other resources. This is the stuff that will 'run' in the browser.
 
-0. Have you installed and run [Kattegat generator](https://github.com/ClintH/generator-kattegat)?
-1. Start by copying the provided `template.html` file and give it a new name, eg `test1.html`
-2. Start your server if you haven't already with `node app`
-3. The server will tell you how to access it, and print our one or more URLs to the terminal. Copy one into your browser, and add on the name of your file, eg `http://127.0.0.1:3000/test1.html`
-4. Hack away on this file, placing any additional resources such as scripts, images and CSS in directories created for you. As you save, your page your automatically reload.
-4. Keep an eye on the server window to help your debugging.
+## Is everything working?
+1. Have you installed and run [Kattegat generator](https://github.com/ClintH/generator-kattegat)?
+2. Start your server if you haven't already, by running `node app` (press CTRL+C to stop it)
+3. The server will display one or more URLs which you can use to access it. Open one of them in your browser
+4. If you get a page, and the demo and template links work you're all set to start hacking
+5. The server window is useful for debugging - keep an eye on it!
+
+## Making your own pages
+The Kattegat generator lets you make your own scratch pages which are ready to go. (https://github.com/ClintH/generator-kattegat/blob/master/README.md#make-page)[Read more on how to do this]
+
+It _should_ be as simple as running:
+
+````
+$ yo kattegat:page
+````
 
 # Good to know
 ## Live reload
 
-As you edit your source files, your browser will automatically refresh, making it quick to try out page changes. For this magic to work, you need to include the following snippet in your HTML:
-
-	`
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js"></' + 'script>')</script>
-	`
-
-(This is already included in the `template.html` file.)
+As you edit your source files, your browser will automatically refresh, making it quick to try out page changes.
 
 ## Javascript libraries
 
-Useful Javascript libraries are preinstalled on your computer for you, and available in the `BASE\bower_components`. To use them in your project, you still have to add a reference to the library in your code. For example, to reference jQuery:
-	
-	`
-	<script src="js/jquery/jquery.min.js"></script>
-	`
+Useful Javascript libraries are preinstalled on your computer for you, and available in the `BASE\bower_components`. You are free to reference them individually with a `SCRIPT` tag, or take advantage of the `BASE\bower_components\libraries.js` file, which is essentially glued-together version of all the libraries, making it super easy to import the whole lot with a single tag:
 
-The `src` path reflects how it is laid out on your computer, but note that 'js' appears instead of 'bower_components'. Any Javascripts you make yourself should be placed in `BASE\public\js`
+````
+<script src="/bower_components/libraries.js"></script>
+````
+
+If you want to just use a single library in your project, don't use the `libraries.js` file. Instead, dig into the `BASE\bower_components` folder to find the path for the source file you want to use and reference it. Normally it will be the source file with the same name as the module. For example, to reference jQuery:
+	
+````
+<script src="/bower_components/jquery/jquery.min.js"></script>
+````
 
 The pre-installed libraries are:
 * [jQuery](http://www.jquery.com)
 * [lodash](https://github.com/lodash/lodash)
+* [Geolib](https://github.com/manuelbieh/Geolib)
 * [PointerEvents polyfill](https://github.com/Polymer/PointerEvents)
+* [PureCSS](http://purecss.io)
+
+The Javascript libraries are installed via (Bower)[http://bower.io/], which makes it easy to install and keep libraries updated. If you're feeling adventurous edit `BASE\bower.json` and add new libraries, and then run the following command to install them:
+
+```
+$ bower install
+```
+
+Of course, you can always reference Javascript libraries hosted remotely, or by copying them into your `BASE\public\js` directory and referencing them, eg to reference `my-extra-library.js` and the remotely-hosted Google Web Fonts loader:
+````
+<script src="js/my-extra-library.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
+````
 
 # Updating Kattegat
 
 From time to time, it might be necessary to update the little engine that powers Kattegat. To do this, stop your server (press CTRL+C) and run:
 
-`npm install`
+````
+$ npm install
+````
 
 This will update the Kattegat engine, but won't touch any of the things you've done. Great!
 
-You are also able to re-run the [Kattegat generator](https://github.com/ClintH/generator-kattegat) (which created all this stuff on your computer in the first place). Be careful doing this, because you might accidently overwrite some of your own work. It's safest to make a new directory, run the generator with `yo kattegat`, and then merge your work manually.
+You are also able to re-run the [Kattegat generator](https://github.com/ClintH/generator-kattegat) (which created all this stuff on your computer in the first place). Be careful doing this, because you might accidently overwrite some of your own work. It's safest to make a new directory, run the generator with:
+
+````
+$ yo kattegat
+````
+
+...and then merge your work manually.
 
 # Getting fancy
 
