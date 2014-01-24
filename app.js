@@ -29,23 +29,22 @@ app.use(express.session());
 app.use(app.router);
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use("/bower_components", express.static(path.join(__dirname, 'bower_components')));
 app.use(express.errorHandler());
 
-var server = http.createServer(app);
+// Init Kattegat and create a server
+var kattegat = require("./index")(app, { debug: true });
+var server = kattegat.create();
 
-// Init Kattegat
-var kattegat = require("./index")(app);
+// Activate storage
+kattegat.store.start();
 
-// Add kattegat middleware
-app.use(kattegat.store());
-
-// Add realtime features
-kattegat.realtime(server);
+// Add realtime
+kattegat.realtime.start();
 
 // Boot up server
-server.listen(app.get('port'), function(){
+server.listen(app.get('port'), function() {
   console.log('Kattegat barebones server has started; you can access it from one of these addresses');
   kattegat.util.hintUrls(app.get('port'));
   console.log("\nTo access your server from another device, make sure it's on the same network.")
-
 });

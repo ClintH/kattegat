@@ -2,3 +2,4 @@ node_modules/
 temp/
 database
 public
+bower_components
