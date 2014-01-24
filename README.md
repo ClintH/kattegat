@@ -6,7 +6,7 @@ It is developed for the Designing Interactive Artifacts course at the IT Univers
 
 Please note that the server is not designed with any kind of access control. Use a firewall to restrict connections, and only run the server when you need it. It should NOT be used for any kind of production purposes.
 
-## Main features
+## What can it do?
 
 * Application server for serving static resources such as HTML, JS, CSS and images (and the use of pre-processors like Jade and Stylus if you like)
 * Persistent storage of small amounts of data, and basic query capabilities (via [nedb](https://github.com/louischatriot/nedb))
@@ -28,7 +28,7 @@ This assumes you've already run the [Kattegat generator](https://github.com/Clin
 5. The server window is useful for debugging - keep an eye on it!
 
 ## Making your own pages
-The Kattegat generator lets you make your own scratch pages which are ready to go. (https://github.com/ClintH/generator-kattegat/blob/master/README.md#make-page)[Read more on how to do this]
+The Kattegat generator lets you make your own scratch pages which are ready to go. [https://github.com/ClintH/generator-kattegat/blob/master/README.md#make-page](Read more on how to do this)
 
 It _should_ be as simple as running:
 
@@ -62,15 +62,15 @@ The pre-installed libraries are:
 * [PointerEvents polyfill](https://github.com/Polymer/PointerEvents)
 * [PureCSS](http://purecss.io)
 
-The Javascript libraries are installed via (Bower)[http://bower.io/], which makes it easy to install and keep libraries updated. If you're feeling adventurous edit `BASE\bower.json` and add new libraries, and then run the following command to install them:
+The Javascript libraries are installed via [Bower](http://bower.io/), which makes it easy to install and keep libraries updated. If you're feeling adventurous edit `BASE\bower.json` and add new libraries and then run the following command to install them:
 
 ```
 $ bower install
 ```
 
-Of course, you can always reference Javascript libraries hosted remotely, or by copying them into your `BASE\public\js` directory and referencing them, eg to reference `my-extra-library.js` and the remotely-hosted Google Web Fonts loader:
+Of course, you can always reference Javascript libraries hosted remotely, or by copying them into your `BASE\public\` directory and referencing them, eg to reference `my-extra-library.js` and the remotely-hosted Google Web Fonts loader:
 ````
-<script src="js/my-extra-library.js"></script>
+<script src="/my-extra-library.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
 ````
 

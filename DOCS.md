@@ -9,7 +9,7 @@ You can get, put and remove data from the server.
 | --------- | ------------- | ---------------|
 | POST      | /store/insert | Object to save |
 
-Response: Data that was stored, with the addition of an id field
+Response: Data that was stored, with the addition of an `_id` field, which uniquely identifies the object. The server also adds a 'created' timestamp for your convenience.
 
 ### Examples
 
@@ -141,7 +141,12 @@ Arguments: `query`: A find query
 | multi | Boolean (false) | If true, will delete multiple objects if they match |
 
 
-Response: Updated object(s)
+### Response
+
+| Field   | Type     | Notes |
+| ------- | -------- | ----- |
+| error   | Boolean  | If non-null, there was an error |
+| removed | Integer  | The number of objects deleted |
 
 ### Example
 Removes all objects with name containing the letter 'j'
