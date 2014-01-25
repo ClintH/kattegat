@@ -108,7 +108,14 @@ Finds all objects that have a 'age' field greater than 25. This would match obje
 ## <a name="storage-put"></a> Updating
 | Method    | URL           | Arguments      |
 | --------- |-------------  | ---------------|
-| POST      | /store/update   | {query, update} where query is a find query, and update is the data to set |
+| POST      | /store/update   | {query, update, options} where query is a find query, and update is the data to set |
+
+### Options argument
+
+| Field | Type (default) | Notes |
+| ----- | -------------- | ----- |
+| upsert | Boolean (false) | If true, object will be created if nothing matches the query argument |
+| multi | Boolean (false) | If true, will update multiple objects if they match |
 
 ### Response
 
@@ -116,6 +123,7 @@ Finds all objects that have a 'age' field greater than 25. This would match obje
 | -------  | -------- | ----- |
 | error    | Boolean  | If non-null, there was an error |
 | replaced | Integer  | The number of objects updated |
+| upsert | Boolean  | If true, document was inserted |
 
 ### Example
 Updates all objects with 'age' greater than 25, setting the age to 20.
@@ -157,7 +165,7 @@ Arguments: `query`: A find query
 Removes all objects with name containing the letter 'j'
 
 ````
-    function update() {
+    function remove() {
         var request = {
             query: { name: "/j/" }
             options: { multi: true }
@@ -218,6 +226,15 @@ function broadcast() {
 	socket.emit("say", data);
 }	
 
+````
+
+Receiving data is a matter of listening for the "say" event. The server will attach a `_.clientId` field to each object that you receive. This id corresponds to ids seen when you list room contents. Client ids are stable for a session, but no longer than that.
+
+````
+socket.on("say", function(d) {
+	console.log("Received from: " + d._clientId);
+	console.log(JSON.stringify(d));
+})
 ````
 
 ## <a name="rt-rooms"></a> Rooms

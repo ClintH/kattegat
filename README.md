@@ -1,6 +1,6 @@
 # Welcome
 
-Kattegat is a simple application server designed to make prototyping Javascript-based interactivity a bit smoother, yet without hiding too much of the real workings. <a href="#install">Install Kattegat</a> and play with the demos, or <a href="https://github.com/ClintH/kattegat/blob/master/DOCS.md">read the documentation</a>.
+Kattegat is a simple application server designed to make prototyping Javascript-based interactivity a bit smoother, yet without hiding too much of the real workings. <a href="#install">Install Kattegat</a> and play with the demos, or <a href="https://github.com/ClintH/kattegat/blob/master/DOCS.md">read the documentation</a>. There are also some basic [sample projects](https://github.com/ClintH/dia-samples) which string together some snippets from the samples and relevant JS docs and show how things work in action.
 
 It is developed for the Designing Interactive Artifacts course at the IT University of Copenhagen.
 
@@ -22,10 +22,12 @@ This assumes you've already run the [Kattegat generator](https://github.com/Clin
 
 ## Is everything working?
 1. Have you installed and run [Kattegat generator](https://github.com/ClintH/generator-kattegat)?
-2. Start your server if you haven't already, by running `node app` (press CTRL+C to stop it)
+2. Start your server if you haven't already, by running `node app` (press CTRL+C to stop it).
 3. The server will display one or more URLs which you can use to access it. Open one of them in your browser
 4. If you get a page, and the demo and template links work you're all set to start hacking
 5. The server window is useful for debugging - keep an eye on it!
+
+Note: If Live reload is enabled, sometimes the server will crash if your text editor writes a temporary file to the Kattegat directory. If that happens, simply restart the server.
 
 ## Making your own pages
 The Kattegat generator lets you make your own scratch pages which are ready to go. [https://github.com/ClintH/generator-kattegat/blob/master/README.md#make-page](Read more on how to do this)
@@ -43,7 +45,7 @@ As you edit your source files, your browser will automatically refresh, making i
 
 ## Javascript libraries
 
-Useful Javascript libraries are preinstalled on your computer for you, and available in the `BASE\bower_components`. You are free to reference them individually with a `SCRIPT` tag, or take advantage of the `BASE\bower_components\libraries.js` file, which is essentially glued-together version of all the libraries, making it super easy to import the whole lot with a single tag:
+Useful Javascript libraries are preinstalled on your computer for you, and available in the `BASE\bower_components`. You are free to reference them individually with a `SCRIPT` tag, or take advantage of the `BASE\bower_components\libraries.js` file, which is a glued-together version of all the libraries, making it super easy to import the whole lot with a single tag:
 
 ````
 <script src="/bower_components/libraries.js"></script>
@@ -57,12 +59,16 @@ If you want to just use a single library in your project, don't use the `librari
 
 The pre-installed libraries are:
 * [jQuery](http://www.jquery.com)
-* [lodash](https://github.com/lodash/lodash)
-* [Geolib](https://github.com/manuelbieh/Geolib)
-* [PointerEvents polyfill](https://github.com/Polymer/PointerEvents)
-* [PureCSS](http://purecss.io)
+* [lodash](https://github.com/lodash/lodash): Utility functions
+* [Geolib](https://github.com/manuelbieh/Geolib): Geographic data functions
+* [PointerEvents polyfill](https://github.com/Polymer/PointerEvents): Mouse/stylus/touch event unifier
+* [PureCSS](http://purecss.io): Simple CSS reset
+* [Chroma.js](https://github.com/gka/chroma.js): Colour manipulation
+* [Hammer](http://eightmedia.github.io/hammer.js/): Touch gesture recognition
+* [Transit](http://ricostacruz.com/jquery.transit/): CSS animation
+* [Moment](http://momentjs.com/): Time and date manipulation
 
-The Javascript libraries are installed via [Bower](http://bower.io/), which makes it easy to install and keep libraries updated. If you're feeling adventurous edit `BASE\bower.json` and add new libraries and then run the following command to install them:
+The libraries are installed via [Bower](http://bower.io/), which makes it easy to install and keep libraries updated. If you're feeling adventurous edit `BASE\bower.json` and add new libraries and then run the following command to install them:
 
 ```
 $ bower install
