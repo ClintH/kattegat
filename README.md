@@ -18,6 +18,21 @@ Please note that the server is not designed with any kind of access control. Use
 
 This assumes you've already run the [Kattegat generator](https://github.com/ClintH/generator-kattegat). Do this step first.
 
+You'll want to open a terminal (or command prompt) window and change directory to the place you ran the Kattegat generator (`yo kattegat`). Hopefully you remember where that is!
+
+To change directory, you can write something like this on your Mac:
+
+````
+$ cd /User/clint/dev/kattegat-play
+````
+
+Or on Windows:
+````
+cd c:\Users\clint\dev\kattegat-play
+````
+
+If you then list the directory contents (`ls` on a Mac or `dir` on a PC), you should see a bunch of directories and files, including a 'bower_components' directory and a 'app.js'. If you do, you're probably in the right place, and can continue. We'll use "BASE" to signify this base directory.
+
 `BASE\public` is where you should place all your client-side HTML, Javascript, CSS, images and other resources. This is the stuff that will 'run' in the browser.
 
 ## Is everything working?
@@ -37,6 +52,8 @@ It _should_ be as simple as running:
 ````
 $ yo kattegat:page
 ````
+
+You'll get prompted for a name of the page. It's a good idea to keep it short and sweet, because this will be how you access the page from a browser. Naming a page 'froz' will mean you access your page at: `http://localhost:3000/froz/`, and your files will be stored in `BASE\public\froz`.
 
 # Good to know
 ## Live reload
