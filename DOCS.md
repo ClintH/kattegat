@@ -1,3 +1,4 @@
+Here is some more low-level documentation of Kattegat. Pretty much everything here is illustrated in the supplied interactive demos.
 
 # <a name="storage"></a> Storage
 
