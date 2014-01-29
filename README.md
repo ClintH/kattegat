@@ -22,4 +22,4 @@ Read the <a href="https://github.com/ClintH/kattegat/blob/master/INSTALL.md">Get
 
 # Read more
 * [API documentation](https://github.com/ClintH/kattegat/blob/master/API.md)
-* [Advanced topics](https://github.com/ClintH/kattegat/blob/master/GOOD TO KNOW.md)
+* [Advanced topics](https://github.com/ClintH/kattegat/blob/master/DOCS.md)
