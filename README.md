@@ -1,6 +1,6 @@
 # Welcome
 
-Kattegat is a simple application server designed to make prototyping Javascript-based interactivity a bit smoother, yet without hiding too much of the real workings. <a href="https://github.com/ClintH/kattegat/blob/master/INSTALL.md">Install Kattegat</a> and play with the demos, or <a href="https://github.com/ClintH/kattegat/blob/master/DOCS.md">read the code documentation</a>. There are also some basic sample projects which string together some snippets from the samples and relevant JS docs and show how things work in action - access those from your own Kattegat server once you've got it running.
+Kattegat is a simple application server designed to make prototyping Javascript-based interactivity a bit smoother, yet without hiding too much of the real workings. <a href="https://github.com/ClintH/kattegat/blob/master/INSTALL.md">Install Kattegat</a> and play with the demos, or <a href="https://github.com/ClintH/kattegat/blob/master/API.md">read the code documentation</a>. There are also some basic sample projects which string together some snippets from the samples and relevant JS docs and show how things work in action - access those from your own Kattegat server once you've got it running.
 
 It is developed for the Designing Interactive Artifacts course at the IT University of Copenhagen.
 
@@ -20,4 +20,6 @@ Please note that the server is not designed with any kind of access control. Use
 
 Read the <a href="https://github.com/ClintH/kattegat/blob/master/INSTALL.md">Getting Started</a> guide
 
-Or <a href="https://github.com/ClintH/kattegat/blob/master/GOOD TO KNOW.md">read more about advanced topics</a>.
+# Read more
+* [API documentation](https://github.com/ClintH/kattegat/blob/master/API.md)
+* [Advanced topics](https://github.com/ClintH/kattegat/blob/master/GOOD TO KNOW.md)
