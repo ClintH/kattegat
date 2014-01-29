@@ -29,6 +29,8 @@ Windows: ([open a Administrator command prompt](http://technet.microsoft.com/en-
 $ npm install -g yo
 ```
 
+Tip: Depending on your network connection it might take a minute or two to complete. Wait until you see your blinking cursor again - that's a sign it's done
+
 [Read more about installing Yeoman](http://yeoman.io/gettingstarted.html)
 
 ## Step 3: Installing the Kattegat generator
@@ -100,7 +102,7 @@ $ cd c:\users\john\code\myapp\
 
 ## Step 6: Starting the server
 
-Once the server is generated, to start it, you can use:
+To start a server you've generated, you can use:
 
 ````
 $ node app
