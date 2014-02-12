@@ -36,10 +36,11 @@ The pre-installed libraries are:
 * [Geolib](https://github.com/manuelbieh/Geolib): Geographic data functions
 * [PointerEvents polyfill](https://github.com/Polymer/PointerEvents): Mouse/stylus/touch event unifier
 * [PureCSS](http://purecss.io): Simple CSS reset
-* [Chroma.js](https://github.com/gka/chroma.js): Colour manipulation
+* [Tinycolor](https://github.com/bgrins/TinyColor): Colour manipulation
 * [Hammer](http://eightmedia.github.io/hammer.js/): Touch gesture recognition
 * [Transit](http://ricostacruz.com/jquery.transit/): CSS animation
 * [Moment](http://momentjs.com/): Time and date manipulation
+* [Animate.css](http://daneden.github.io/animate.css/): Easily add simple animations
 
 The libraries are installed via [Bower](http://bower.io/), which makes it easy to install and keep libraries updated. If you're feeling adventurous edit `BASE\bower.json` and add new libraries and then run the following command to install them:
 
