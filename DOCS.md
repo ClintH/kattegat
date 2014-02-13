@@ -1,21 +1,3 @@
-# Updating Kattegat
-
-From time to time, it might be necessary to update the little engine that powers Kattegat. To do this, stop your server (press CTRL+C) and run:
-
-````
-$ npm install
-````
-
-This will update the Kattegat engine, but won't touch any of the things you've done. Great!
-
-You are also able to re-run the [Kattegat generator](https://github.com/ClintH/generator-kattegat) (which created all this stuff on your computer in the first place). Be careful doing this, because you might accidently overwrite some of your own work. It's safest to make a new directory, run the generator with:
-
-````
-$ yo kattegat
-````
-
-...and then merge your work manually.
-
 # Javascript libraries
 
 Useful Javascript libraries are preinstalled on your computer for you, and available in the `BASE\bower_components`. You are free to reference them individually with a `SCRIPT` tag, or take advantage of the `BASE\bower_components\libraries.js` file, which is a glued-together version of all the libraries, making it super easy to import the whole lot with a single tag:
