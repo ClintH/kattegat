@@ -18,7 +18,7 @@ Please note that the server is not designed with any kind of access control. Use
 
 # <a href="https://github.com/ClintH/kattegat/blob/master/INSTALL.md">Getting started</a>
 
-Read the [Getting Started](https://github.com/ClintH/kattegat/blob/master/INSTALL.md") guide for how to install and update.
+Read the [Getting Started](https://github.com/ClintH/kattegat/blob/master/INSTALL.md) guide for how to install and update.
 
 # Read more
 * [API documentation](https://github.com/ClintH/kattegat/blob/master/API.md)
