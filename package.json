@@ -1,6 +1,6 @@
 {
   "name": "kattegat",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Kattegat middleware for Express 3.x",
   "main": "index.js",
   "scripts": {
