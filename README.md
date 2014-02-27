@@ -1,8 +1,8 @@
 # Welcome
 
-Kattegat is a simple application server designed to make prototyping Javascript-based interactivity a bit smoother, yet without hiding too much of the real workings. [Install Kattegat](https://github.com/ClintH/kattegat/blob/master/INSTALL.md") and play with the demos, or [read the code documentation](https://github.com/ClintH/kattegat/blob/master/API.md). There are also some basic sample projects which string together some snippets from the samples and relevant JS docs and show how things work in action - access those from your own Kattegat server once you've got it running.
+Kattegat is a simple application server designed to make prototyping Javascript-based interactivity a bit smoother, yet without hiding too much of the real workings. [Install Kattegat](https://github.com/ClintH/kattegat/blob/master/INSTALL.md) and play with the demos, or [read the code documentation](https://github.com/ClintH/kattegat/blob/master/API.md). There are also some basic sample projects which string together some snippets from the samples and relevant JS docs and show how things work in action - access those from your own Kattegat server once you've got it running.
 
-It is developed for the Designing Interactive Artifacts course at the IT University of Copenhagen.
+It is developed for the Designing Interactive Artifacts course at the IT University of Copenhagen. [We've also made some starter JS sketches which run on top of Kattegat](https://github.com/ClintH/dia-samples/).
 
 Please note that the server is not designed with any kind of access control. Use a firewall to restrict connections, and only run the server when you need it. It should NOT be used for any kind of production purposes.
 
@@ -18,7 +18,7 @@ Please note that the server is not designed with any kind of access control. Use
 
 # <a href="https://github.com/ClintH/kattegat/blob/master/INSTALL.md">Getting started</a>
 
-Read the [Getting Started](https://github.com/ClintH/kattegat/blob/master/INSTALL.md") guide
+Read the [Getting Started](https://github.com/ClintH/kattegat/blob/master/INSTALL.md") guide for how to install and update.
 
 # Read more
 * [API documentation](https://github.com/ClintH/kattegat/blob/master/API.md)
