@@ -152,7 +152,7 @@ To update, simply run:
 $ yo
 ````
 
-And Yeoman will show a little menu. Use your cursor keys to move down to "Update your generators" and press ENTER. Yeoman should take care of the rest.
+And Yeoman will show a little menu. Use your cursor keys to move down to "Update your generators" and press ENTER. Yeoman should take care of the rest. If you don't see "Kattegat" listed when you run `yo`, you'll need to install it as per Step 3 above.
 
 If you get an error about `EM FILE, too many open files`, try running:
 ````
