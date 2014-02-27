@@ -173,11 +173,7 @@ Open a terminal and navigate to your base directory (eg `cd /Users/John/code/mya
 From the base directory, run:
 
 ````
-$ npm update
+$ grunt update
 ````
 
-This will update the Kattegat engine, but won't touch any of the things you've done. Great!
-
-You are also able to re-run the [Kattegat generator](https://github.com/ClintH/generator-kattegat) (which created all this stuff on your computer in the first place). Be careful doing this, because you might accidently overwrite some of your own work: backing up your sketches in `public` is always a good idea
-
-Note that it might be possible to new samples/demos will not work unless you also update the generator and make a new project. You can always copy your existing work into a new project folder.
+This will update a bunch of Kattegat things, as well as download the lastest version of the samples.
