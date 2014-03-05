@@ -127,19 +127,19 @@ Tip: `http://127.0.0.1:3000/` is _always_ your local machine. If you are connect
 
 Tip: Keep an eye on the terminal where the server is running. It prints useful information about what your sketch is doing, and - rarely - it might crash and need restarting.
 
-# <a name="make-page"></a> Starter pages
+# <a name="make-page"></a> Starter sketches
 
-When you first make your app, the directory `BASE\public\template` is created, with HTML, CSS and JS files ready to go. This is a great starting point for making quick sketches or experiments.
+When you first make your project, the directory `BASE\public\template` is created, with HTML, CSS and JS files ready to go. This is a great starting point for making quick sketches or experiments.
 
-You can generate a new pages when you like from your base directory with:
+You can generate a new sketch from your base directory with:
 
 ````
-$ yo kattegat:page
+$ yo kattegat:sketch
 `````
 
-You'll get prompted for a name of the page. It's a good idea to keep it short and sweet, because this will be how you access the page from a browser. Naming a page 'froz' will mean you access your page at: `http://localhost:3000/froz/`, and your files will be stored in `BASE\public\froz` (where BASE is your base directory, eg `/Users/mary/code/`)
+You'll get prompted for a name of the sketch. It's a good idea to keep it short and sweet, because this will be how you access the sketch from a browser. Naming a sketch 'froz' will mean you access your sketch at: `http://localhost:3000/froz/`, and your files will be stored in `BASE\public\froz` (where BASE is your base directory, eg `/Users/mary/code/`)
 
-The page generator will make a new folder and starter files for you, all ready to go.
+The sketch generator will make a new folder and starter files for you, all ready to go.
 
 # <a name="updating"></a> Updating
 
