@@ -147,7 +147,7 @@ When you update, you probably want to update both the Kattegat generator, and Ka
 
 ## Kattegat Generator
 
-To update, simply run:
+To update, and to see the version of Kattegat Generator you have installed simply run:
 ````
 $ yo
 ````
@@ -161,6 +161,15 @@ $ yo
 ````
 
 After the update has finished, and the Yeoman menu is still showing, navigate to the last option, "Get me out of here!" and press ENTER to quit.
+
+If the update does not succeed, try uninstalling the generator. (these two lines will uninstall the global copy as well as any local copy in the current directory)
+
+````
+$ npm uninstall -g generator-kattegat
+$ npm uninstall generator-kattegat
+````
+
+And then reinstall as per step 3 above.
 
 New projects you make (using `yo kattegat`) will now use the new version of Kattegat. If you want to update an existing project, read on for updating Kattegat.
 
