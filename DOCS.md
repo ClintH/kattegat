@@ -13,24 +13,27 @@ If you want to just use a single library in your project, don't use the `librari
 ````
 
 The pre-installed libraries are:
-* [jQuery](http://www.jquery.com)
-* [lodash](https://github.com/lodash/lodash): Utility functions
+* [Animate.css](http://daneden.github.io/animate.css/): Easily add simple animations
 * [Geolib](https://github.com/manuelbieh/Geolib): Geographic data functions
+* [Hammer](http://eightmedia.github.io/hammer.js/): Touch gesture recognition
+* [jsfeat](http://inspirit.github.io/jsfeat/#imgproc): Image processing
+* [jQuery](http://www.jquery.com)
+* [Leaflet](http://leafletjs.com/): Map rendering
+* [lodash](https://github.com/lodash/lodash): Utility functions
+* [Moment](http://momentjs.com/): Time and date manipulation
 * [PointerEvents polyfill](https://github.com/Polymer/PointerEvents): Mouse/stylus/touch event unifier
 * [PureCSS](http://purecss.io): Simple CSS reset
 * [Tinycolor](https://github.com/bgrins/TinyColor): Colour manipulation
-* [Hammer](http://eightmedia.github.io/hammer.js/): Touch gesture recognition
 * [Transit](http://ricostacruz.com/jquery.transit/): CSS animation
-* [Moment](http://momentjs.com/): Time and date manipulation
-* [Animate.css](http://daneden.github.io/animate.css/): Easily add simple animations
 
-The libraries are installed via [Bower](http://bower.io/), which makes it easy to install and keep libraries updated. If you're feeling adventurous edit `BASE\bower.json` and add new libraries and then run the following command to install them:
+The libraries are installed via [Bower](http://bower.io/), which makes it easy to install and keep libraries updated. If you're feeling adventurous you can install new Bower packages, and then run some grunt tasks to rebuild `libaries.js`.
 
-```
-$ grunt update
-```
+````
+$ bower install cool-library
+$ grunt clean bower_concat concat
+````
 
-Of course, you can always reference Javascript libraries hosted remotely, or by copying them into your `BASE\public\` directory and referencing them, eg to reference `my-extra-library.js` and the remotely-hosted Google Web Fonts loader:
+Of course, you can always reference Javascript libraries hosted remotely, or by copying them into your `BASE\public\` directory and referencing them. To reference `my-extra-library.js` and the remotely-hosted Google Web Fonts loader:
 ````
 <script src="/my-extra-library.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js"></script>
