@@ -1,6 +1,6 @@
 {
   "name": "kattegat",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Kattegat middleware for Express 3.x",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "express-livereload": "0.0.24",
     "nedb":"0.9.4",
     "lodash":"2.4.1",
-    "socket.io":"0.9.16"
+    "socket.io":"1.0.6"
   },
   "engines": {
     "node": ">=0.8.0"
