@@ -1,6 +1,6 @@
 # Getting Started
 
-We'll be using the terminal ("command prompt" on Windows) to do a lot of stuff. I use a $ to show what you need to type at the prompt - don't actually type the $. You can read more about the [Mac OS X terminal](http://www.dummies.com/how-to/content/how-to-use-basic-unix-commands-to-work-in-terminal.html) and [Windows command prompt](http://www.sophos.com/en-us/support/knowledgebase/13195.aspx)
+We'll be using the terminal ("command prompt" on Windows) to do a lot of stuff. I use a $ to show what you need to type at the prompt - **don't actually type the $**. You can read more about the [Mac OS X terminal](http://www.dummies.com/how-to/content/how-to-use-basic-unix-commands-to-work-in-terminal.html) and [Windows command prompt](http://www.sophos.com/en-us/support/knowledgebase/13195.aspx)
 
 ## Step 1: Installing Node and Git
 
@@ -8,6 +8,25 @@ Make sure you've already installed:
 * [Node.js](http://nodejs.org/download/).
 ** Node installs as a system-level system, so it's not very visible after it's done installing. You can always open a terminal and run `node` if you want to be sure you've got it installed. If it works, you'll get a `>` prompt. Hit CTRL+C twice to exit.
 * Git: [Windows](https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git) / [Mac](http://git-scm.com/download/mac)
+
+Mac users, before you further, we need to make a tweak to npm. Open a terminal window and run:
+```
+$ echo prefix = ~/.node >> ~/.npmrc
+```
+
+Now edit your profile with nano:
+```
+$ nano ~/.bashrc
+```
+
+Add the following line and save the file.
+```
+export PATH="$PATH:$HOME/.node/bin"
+```
+
+Close the Terminal window before proceeding.
+
+You can read more about this technique [here](http://stackoverflow.com/questions/18212175/npm-yeoman-install-generator-angular-without-sudo/18277225#18277225) and [here](https://coderwall.com/p/6aumug/howto-npm-global-install-without-root-privileges).
 
 ## Step 2: Installing Yeoman
 
@@ -19,20 +38,7 @@ Open up a terminal/command prompt, and install [Yeoman](http://yeoman.io) with t
 $ npm install -g yo
 ```
 
-If you get a permission denied error on a Mac, try the following, and repeat the line above.
-
-```
-$ sudo chown -R $USER /usr/local
-```
-
-
-Windows: ([open a Administrator command prompt](http://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx))
-
-```
-$ npm install -g yo
-```
-
-Tip: Depending on your network connection it might take a minute or two to complete. Wait until you see your blinking cursor again - that's a sign it's done
+Tip: Depending on your network connection it might take a minute or two to complete. Wait until you see your blinking cursor again - that's a sign it's done. The "-g" bit tells npm you want to install "yo" globally on your computer, so you can access it no matter what directory you are in. This is useful.
 
 [Read more about installing Yeoman](http://yeoman.io/gettingstarted.html)
 
@@ -40,7 +46,7 @@ Tip: Depending on your network connection it might take a minute or two to compl
 
 The [Kattegat generator](https://github.com/ClintH/generator-kattegat) is a magical tool that generates a application server for you. But first you need to install it.
 
-We can use npm to install it for us:
+We can use npm to install globally:
 
 ```
 $ npm install -g generator-kattegat
@@ -129,7 +135,7 @@ Tip: Keep an eye on the terminal where the server is running. It prints useful i
 
 # <a name="make-page"></a> Starter sketches
 
-When you first make your project, the directory `BASE\public\template` is created, with HTML, CSS and JS files ready to go. This is a great starting point for making quick sketches or experiments.
+When you first make your project, the directory `BASE/public/template` is created, with HTML, CSS and JS files ready to go. This is a great starting point for making quick sketches and experiments.
 
 You can generate a new sketch from your base directory with:
 
@@ -137,7 +143,7 @@ You can generate a new sketch from your base directory with:
 $ yo kattegat:sketch
 `````
 
-You'll get prompted for a name of the sketch. It's a good idea to keep it short and sweet, because this will be how you access the sketch from a browser. Naming a sketch 'froz' will mean you access your sketch at: `http://localhost:3000/froz/`, and your files will be stored in `BASE\public\froz` (where BASE is your base directory, eg `/Users/mary/code/`)
+You'll get prompted for a name of the sketch. It's a good idea to keep it short and sweet, because this will be how you access the sketch from a browser. Naming a sketch 'froz' will mean you access your sketch at: `http://localhost:3000/froz/`, and your files will be stored in `BASE/public/froz` (eg if your BASE base directory is `/Users/mary/code/`, your files will be in `/Users/mary/code/public/froz`)
 
 The sketch generator will make a new folder and starter files for you, all ready to go.
 
