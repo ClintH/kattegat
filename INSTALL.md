@@ -4,29 +4,7 @@ We'll be using the terminal ("command prompt" on Windows) to do a lot of stuff. 
 
 ## Step 1: Installing Node and Git
 
-Make sure you've already installed:
-* [Node.js](http://nodejs.org/download/).
-** Node installs as a system-level system, so it's not very visible after it's done installing. You can always open a terminal and run `node` if you want to be sure you've got it installed. If it works, you'll get a `>` prompt. Hit CTRL+C twice to exit.
-* Git: [Windows](https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git) / [Mac](http://git-scm.com/download/mac)
-
-Mac users, before you further, we need to make a tweak to npm. Open a terminal window and run:
-```
-$ echo prefix = ~/.node >> ~/.npmrc
-```
-
-Now edit your profile with nano:
-```
-$ nano ~/.bashrc
-```
-
-Add the following line and save the file.
-```
-export PATH="$PATH:$HOME/.node/bin"
-```
-
-Close the Terminal window before proceeding.
-
-You can read more about this technique [here](http://stackoverflow.com/questions/18212175/npm-yeoman-install-generator-angular-without-sudo/18277225#18277225) and [here](https://coderwall.com/p/6aumug/howto-npm-global-install-without-root-privileges).
+[Please follow these steps for installing Node.js](INSTALL NODE.md)
 
 ## Step 2: Installing Yeoman
 
