@@ -16,9 +16,12 @@
 
 6. Close Terminal and open it again, as instructed by the nvm installer
 7. Test that nvm is working by typing `nvm` followed by ENTER. You should see a bunch of text.
-8. Finally we can install the latest stable version of Node.js. Paste the following and press ENTER:
+8. Install the latest stable version of Node.js. Paste the following and press ENTER:
 
 	`nvm install stable`
+9. Instruct nvm to use the stable version. Paste the following and press ENTER. (nvm allows you to switch between different versions of Node)
+
+	`nvm alias default stable`
 
 9. Test that Node is working by typing `node --version` and pressing ENTER. You should see a version number printed.
 10. Success! 

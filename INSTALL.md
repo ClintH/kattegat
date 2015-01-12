@@ -2,25 +2,23 @@
 
 We'll be using the terminal ("command prompt" on Windows) to do a lot of stuff. I use a $ to show what you need to type at the prompt - **don't actually type the $**. You can read more about the [Mac OS X terminal](http://www.dummies.com/how-to/content/how-to-use-basic-unix-commands-to-work-in-terminal.html) and [Windows command prompt](http://www.sophos.com/en-us/support/knowledgebase/13195.aspx)
 
-## Step 1: Installing Node and Git
+## Step 1: Install Node and Git
 
 [Please follow these steps for installing Node.js](INSTALL NODE.md)
 
-## Step 2: Installing Yeoman
+## Step 2: Install helper tools
 
 We'll use [npm](http://howtonode.org/introduction-to-npm) (Node Package Manager), a useful tool for downloading packages of code and keeping them up to date. It is installed automatically on your computer when you install Node.js.
 
-Open up a terminal/command prompt, and install [Yeoman](http://yeoman.io) with the following command:
+Open up a terminal/command prompt, and the helper tools ([Yeoman](http://yeoman.io), [Bower](http://bower.io), [Grunt](http://gruntjs.com) and [Gulp](http://gulpjs.com)) with the following command:
 
 ```
-$ npm install -g yo
+$ npm install -g yo bower grunt-cli gulp
 ```
 
-Tip: Depending on your network connection it might take a minute or two to complete. Wait until you see your blinking cursor again - that's a sign it's done. The "-g" bit tells npm you want to install "yo" globally on your computer, so you can access it no matter what directory you are in. This is useful.
+Depending on your network connection it might take a minute or two to complete. Wait until you see your blinking cursor again - that's a sign it's done. The `"-g"` bit tells npm you want to install the tools globally on your computer, so you can access it no matter what directory you are in. This is useful.
 
-[Read more about installing Yeoman](http://yeoman.io/gettingstarted.html)
-
-## Step 3: Installing the Kattegat generator
+## Step 3: Install Kattegat generator
 
 The [Kattegat generator](https://github.com/ClintH/generator-kattegat) is a magical tool that generates a application server for you. But first you need to install it.
 
@@ -29,6 +27,7 @@ We can use npm to install globally:
 ```
 $ npm install -g generator-kattegat
 ```
+
 
 ## <a name="make-server"></a>Step 4: Making a home for your code
 
@@ -73,7 +72,7 @@ You can now run the Kattegat generator. It will ask you for a name of the projec
 $ yo kattegat
 ```
 
-It will take some time to run, and you'll see a lot of stuff scrolling by. Once it's done and you get the message "Done, without errors" you're ready to continue.
+It will take some time to run, and you'll see a lot of stuff scrolling by. Once it's done and you get the message "Done, without errors" you're ready to continue. If it nothing seems to happen for a while, try pressing ENTER.
 
 Tip: You might be prompted to install additional Git software. In this case, run the installer, and when it is completed, re-run the command above.
 
