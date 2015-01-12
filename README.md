@@ -13,9 +13,9 @@ Please note that the server is not designed with any kind of access control. Use
 * Live reload for quick and easy experimentation with HTML, JS and CSS
 * Persistent storage of small amounts of data and basic query capabilities (via [nedb](https://github.com/louischatriot/nedb))
 * Simple realtime data exchange (via [Socket.io](http://socket.io)) between devices
-* TODO: Arduino interfacing (via [Breakout.js](http://breakoutjs.com))
-* TODO: Phidget interfacing
-
+* Plugins
+    * Subscribing to updates in a Google Spreadsheet (ideal for interfacing with [IFTTT](http://ifttt.com))
+    
 # <a href="https://github.com/ClintH/kattegat/blob/master/INSTALL.md">Getting started</a>
 
 Read the [Getting Started](https://github.com/ClintH/kattegat/blob/master/INSTALL.md) guide for how to install and update.

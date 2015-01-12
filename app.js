@@ -44,6 +44,10 @@ kattegat.realtime.start();
 
 // Boot up server
 server.listen(app.get('port'), function() {
+	// Add Google Spreadsheet plugin
+	var GSpreadsheetDataSource = require("./lib/plugins/GSpreadsheetDataSource");
+	var o = new GSpreadsheetDataSource(app, kattegat);
+
   console.log('Kattegat barebones server has started; you can access it from one of these addresses');
   kattegat.util.hintUrls(app.get('port'));
   console.log("\nTo access your server from another device, make sure it's on the same network.")

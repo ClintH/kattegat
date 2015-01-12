@@ -329,3 +329,72 @@ function get() {
 Data is returned to you in the 'data' event handler. Data is also furnished when you emit a 'list' event as well - and gives you all the data for all clients in a room.
 
 The data feature can be useful for tracking some state information about clients. Eg, you could imagine that use "say" to broadcast information about a game player's movements, and use the "put" to save their current score, or name. - since it doesn't change as often.
+
+
+# <a name="plugin-gs"></a> Plugin: Google Spreadsheet
+
+Allows you to fetch data from a published Google Spreadsheet and get notified when new rows are inserted.
+
+In order to use this feature, open the Google Spreadsheet you want to access in Google Drive. Go to "File > Publish to the Web". Click "Publish" (ensure that 'Entire Document' is selected). In the following panel, you'll get a link to your published spreadsheet. It will look something like:</p>
+
+`https://docs.google.com/spreadsheets/d/<em>KEY</em>/pubhtml`
+
+Eg: `https://docs.google.com/spreadsheets/d/1ghnYs4APEN421zNODNEbeMzkDGtio1ET39xHoSfXDsg/pubhtml`
+
+In order to use the spreadsheet with Kattegat, you need just the *KEY* part of the URL Google gives you.
+
+
+## Subscribing
+
+| Method    | URL           | JSON Arguments      |
+| --------- | ------------- | ---------------|
+| POST      | /gspreadsheet | key: key of spreadsheet |
+
+Response: If successfully subscribed, you'll get a response back containing `created`/`expiresAt` timestamps (milliseconds), `key` and `rowIndex`. And existing data already fetched is contained in `rows`.
+
+The subscription will expire after some minute, so it is necessary to periodically resubscribe, or subscribe on page load.
+
+Data will be sent to you via the realtime client, using a room with the same name as the spreadsheet key. Therefore, first subscribe to the room, and then send the POST request.
+
+If the server is restarted, it will also be necessary for clients to re-subscribe.
+
+### Example
+
+Example: Subscribes to a spreadsheet and outputs response
+````
+	$.post("/gspreadsheet", {key:"1ghnYs4APEN421zNODNEbeMzkDGtio1ET39xHoSfXDsg"}, function(data, status, xhr) {
+		console.log("Subscribe result:");
+		console.dir(data);
+	})
+````
+
+## Fetching data
+
+Returns the last set of data loaded for that spreadsheet. If the subscription does not exist (or has expired), you'll get a 404 error.
+
+
+| Method    | URL           | Arguments      |
+| --------- | ------------- | ---------------|
+| GET      | /gspreadsheet/:key | key: key of spreadsheet |
+
+Response: A set of rows.
+
+### Example
+
+Example: Fetches data for a particular spreadsheet
+````
+	$.get("/gspreadsheet/1ghnYs4APEN421zNODNEbeMzkDGtio1ET39xHoSfXDsg")
+	.done(function(o) {
+		console.log("Data:");
+		console.dir(o);
+	})
+	.fail(function(e) {
+		if (e.status == 404) {
+			console.log("Subscription doesn't exist yet");
+		} else {
+			console.log("Fail");
+			console.dir(e);
+		}
+		
+	})
+````
