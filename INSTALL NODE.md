@@ -15,7 +15,7 @@
 	`curl https://raw.githubusercontent.com/creationix/nvm/v0.22.0/install.sh | bash`
 
 6. Close Terminal and open it again, as instructed by the nvm installer
-7. Test that nvm is working by typing `nvm` followed by ENTER. You should see a bunch of text.
+7. Test that nvm is working by typing `nvm` followed by ENTER. You should see a bunch of text. Mac users: If you get an error "Command not found", please try `source ~/.nvm/nvm.sh` and then `nvm` again. If this works, you'll have to add the source... line to your ~/.bashrc or ~/.bash_profile file so it runs every time you start Terminal. Fo
 8. Install the latest stable version of Node.js. Paste the following and press ENTER:
 
 	`nvm install stable`
