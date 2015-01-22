@@ -41,6 +41,7 @@ If running `nvm` works after you do that, you'll need to make some changes to yo
 You need to add the following lines, but change *USERNAME* to the username you use to login. If in doubt, run `whoami`.
 
 `export NVM_DIR="/Users/USERNAME/.nvm"`
+
 `[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"`
 
 Save the file with by pressing Ctrl+X and hitting Y when prompted to save. Close and restart Terminal and try to continue from step 7.
