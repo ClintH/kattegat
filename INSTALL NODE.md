@@ -32,16 +32,16 @@ If you need to remove Node.js run `nvm uninstall stable`. If that doesn't work y
 
 If you get the error "command not found" when running `nvm` as per step 7, try pasting in the following line:
 
-	`source ~/.nvm/nvm.sh`
+`source ~/.nvm/nvm.sh`
 
 If running `nvm` works after you do that, you'll need to make some changes to your ~/.bash_profile. This set of commands that runs every time you start a new Terminal session. Open the file for editing using Pico:
 
-	`pico ~/.bash_profile`
+`pico ~/.bash_profile`
 
 You need to add the following lines, but change *USERNAME* to the username you use to login. If in doubt, run `whoami`.
 
-	`export NVM_DIR="/Users/USERNAME/.nvm"`
-	`[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"`
+`export NVM_DIR="/Users/USERNAME/.nvm"`
+`[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"`
 
 Save the file with by pressing Ctrl+X and hitting Y when prompted to save. Close and restart Terminal and try to continue from step 7.
 
