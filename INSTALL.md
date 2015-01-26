@@ -2,9 +2,11 @@
 
 We'll be using the terminal ("command prompt" on Windows) to do a lot of stuff. I use a $ to show what you need to type at the prompt - **don't actually type the $**. You can read more about the [Mac OS X terminal](http://www.dummies.com/how-to/content/how-to-use-basic-unix-commands-to-work-in-terminal.html) and [Windows command prompt](http://www.sophos.com/en-us/support/knowledgebase/13195.aspx)
 
+On OS X, you'll want to start the "Terminal" app, and on Windows, start the "Command Prompt" app (Win+R, type `cmd` and press ENTER)
+
 ## Step 1: Install Node and Git
 
-[Please follow these steps for installing Node.js](INSTALL NODE.md)
+[Please follow these steps for installing Node.js and Git](INSTALL NODE.md)
 
 ## Step 2: Install helper tools
 
@@ -145,11 +147,10 @@ $ yo
 
 After the update has finished, and the Yeoman menu is still showing, navigate to the last option, "Get me out of here!" and press ENTER to quit.
 
-If the update does not succeed, try uninstalling the generator. (these two lines will uninstall the global copy as well as any local copy in the current directory)
+If the update does not succeed, try uninstalling the generator:
 
 ````
 $ npm uninstall -g generator-kattegat
-$ npm uninstall generator-kattegat
 ````
 
 And then reinstall as per step 3 above.
