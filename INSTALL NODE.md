@@ -2,29 +2,30 @@
 
 ## Mac OS
 
-*Note!* Do not use the Node.js installer, instead we'll install it using "nvm", which solves many common problems.
+*Note!* Do not use the Node.js installer, instead we'll install it using "nvm", eliminates common problems.
 
 1. [Install "Git"](http://git-scm.com/download)
-2. [Install Apple's XCode](http://developer.apple.com/xcode/)
-3. Open "Terminal"
-4. Install XCode's command line tools by pasting the following text and pressing ENTER: 
+2. [Install Apple's XCode](http://developer.apple.com/xcode/).
+3. Before continuing, start XCode and click "Accept" for the Terms of Service. This is important.
+4. Open "Terminal"
+5. Install XCode's command line tools by pasting the following text and pressing ENTER: 
 
 	`xcode-select --install`
-5. Install nvm by pasting the following text and pressing ENTER:
+6. Install nvm by pasting the following text and pressing ENTER:
 
 	`curl https://raw.githubusercontent.com/creationix/nvm/v0.22.0/install.sh | bash`
 
-6. Close Terminal and open it again, as instructed by the nvm installer
-7. Test that nvm is working by typing `nvm` followed by ENTER. You should see a bunch of text. Mac users: If you get an error "Command not found", please jump to the section below and then come back and continue.
-8. Install the latest stable version of Node.js. Paste the following and press ENTER:
+7. Close Terminal and open it again, as instructed by the nvm installer
+8. Test that nvm is working by typing `nvm` followed by ENTER. You should see a bunch of text. Mac users: If you get an error "Command not found", please jump to the section below and then come back and continue.
+9. Install the latest stable version of Node.js. Paste the following and press ENTER:
 
 	`nvm install stable`
-9. Instruct nvm to use the stable version. Paste the following and press ENTER. (nvm allows you to switch between different versions of Node)
+10. Instruct nvm to use the stable version. Paste the following and press ENTER. (nvm allows you to switch between different versions of Node)
 
 	`nvm alias default stable`
 
-9. Test that Node is working by typing `node --version` and pressing ENTER. You should see a version number printed.
-10. Success! 
+11. Test that Node is working by typing `node --version` and pressing ENTER. You should see a version number printed.
+12. Success! Now you can continue with the rest of the install steps.
 
 If you need to remove Node.js run `nvm uninstall stable`. If that doesn't work you can manually remove it [by following these instructions](https://gist.github.com/ddo/668630454ea0d74fdc21).
 
@@ -38,17 +39,19 @@ If running `nvm` works after you do that, you'll need to make some changes to yo
 
 `pico ~/.bash_profile`
 
-You need to add the following lines, but change *USERNAME* to the username you use to login. If in doubt, run `whoami`.
+You need to add the following lines, but change *USERNAME* to the username you use to login. If in doubt, run `whoami` to find out what your username is.
 
 `export NVM_DIR="/Users/USERNAME/.nvm"`
 
 `[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"`
 
-Save the file with by pressing Ctrl+X and hitting Y when prompted to save. Close and restart Terminal and try to continue from step 7.
+Save the file with by pressing Ctrl+X and hitting Y when prompted to save, overwriting the file. Close and restart Terminal and try to continue from step 8.
 
 ## Windows
+On Windows, you can open a new command prompt from the start menu, or by pressing Win+R, typing "cmd" and pressing ENTER.
 
-1. [Install "Git"](http://git-scm.com/download)
-2. Visit [Nodejs.org and download the Windows installer](http://nodejs.org/download/)
-3. Install
-4. You are done
+1. [Install "Git"](http://git-scm.com/download). *Note:* You will be asked about "Adjusting your PATH environment", and given three choices. Select "Run Git from the Windows Command Prompt" or "Run Git and included Unix tools from the Windows COmmand Prompt". I.e., do *not* choose the first option "Use Git Bash only"
+2. Open a new Command Prompt, type `git` and press ENTER to test that Git is installed. You should see a bunch of text. If it works, close the command prompt again.
+3. Download and run [the Nodejs Windows installer (x64)](http://nodejs.org/download/)
+4. After it finishes installing, you can test that Node is installed by opening a new command prompt (and yes, it's important that it's a new one), typing `node` and press ENTER. You should see a `>` prompt. Press Ctrl+C twice to exit again.
+5. Success! You can now continue with installing Kattegat.
