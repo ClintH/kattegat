@@ -1,8 +1,8 @@
+There are instructions for installing Node.js for Mac OS X and Windows (at the bottom). If you are using Linux, follow the instructions for OS X, starting from step 6.
 
+## OS X
 
-## Mac OS
-
-*Note!* Do not use the Node.js installer, instead we'll install it using "nvm", eliminates common problems.
+*Note!* Do not use the Node.js installer, instead we'll install it using "nvm", which eliminates common problems.
 
 1. [Install "Git"](http://git-scm.com/download)
 2. [Install Apple's XCode](http://developer.apple.com/xcode/).
@@ -29,7 +29,7 @@
 
 If you need to remove Node.js run `nvm uninstall stable`. If that doesn't work you can manually remove it [by following these instructions](https://gist.github.com/ddo/668630454ea0d74fdc21).
 
-### Mac: Nvm Command Not Found
+### Error: 'nvm Command Not Found'
 
 If you get the error "command not found" when running `nvm` as per step 7, try pasting in the following line:
 
@@ -39,7 +39,7 @@ If running `nvm` works after you do that, you'll need to make some changes to yo
 
 `pico ~/.bash_profile`
 
-You need to add the following lines, but change *USERNAME* to the username you use to login. If in doubt, run `whoami` to find out what your username is.
+You need to add the following two lines, but change *USERNAME* to the username you use to login. If in doubt, run `whoami` to find out what your username is.
 
 `export NVM_DIR="/Users/USERNAME/.nvm"`
 
@@ -53,5 +53,5 @@ On Windows, you can open a new command prompt from the start menu, or by pressin
 1. [Install "Git"](http://git-scm.com/download). *Note:* You will be asked about "Adjusting your PATH environment", and given three choices. Select "Run Git from the Windows Command Prompt" or "Run Git and included Unix tools from the Windows COmmand Prompt". I.e., do *not* choose the first option "Use Git Bash only"
 2. Open a new Command Prompt, type `git` and press ENTER to test that Git is installed. You should see a bunch of text. If it works, close the command prompt again.
 3. Download and run [the Nodejs Windows installer (x64)](http://nodejs.org/download/)
-4. After it finishes installing, you can test that Node is installed by opening a new command prompt (and yes, it's important that it's a new one), typing `node` and press ENTER. You should see a `>` prompt. Press Ctrl+C twice to exit again.
+4. After it finishes installing, you can test that Node is installed by opening a new command prompt (and yes, it's important that it's a new one), typing `node --version` and press ENTER. You should see a version number.
 5. Success! You can now continue with installing Kattegat.
