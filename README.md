@@ -13,6 +13,7 @@ Please note that the server is not designed with any kind of access control. Use
 * Live reload for quick and easy experimentation with HTML, JS and CSS
 * Persistent storage of small amounts of data and basic query capabilities (via [nedb](https://github.com/louischatriot/nedb))
 * Simple realtime data exchange (via [Socket.io](http://socket.io)) between devices
+* Interact with motors, sensors etc with a [Tessel](http://tessel.io). Please see the companion project [kattegat-tessel](https://github.com/clinth/kattegat-tessel) for more.
 * Plugins
     * Subscribing to updates in a Google Spreadsheet (ideal for interfacing with [IFTTT](http://ifttt.com))
     
