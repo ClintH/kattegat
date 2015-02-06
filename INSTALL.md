@@ -170,3 +170,13 @@ $ grunt update
 ````
 
 This will update a bunch of Kattegat things, as well as download the lastest version of the samples.
+
+## DIA Samples
+
+If you want to update just the samples, run the following:
+
+````
+$ grunt samplesUpdate
+````
+
+**Note** Any changes you've made within the 'dia-samples' directory will be overwritten.
