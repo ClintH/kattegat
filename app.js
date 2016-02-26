@@ -9,6 +9,7 @@ Use the kattegat yeoman generator to generate your own app.
 
 */
 var express = require('express');
+var bodyParser = require('body-parser');
 var http = require('http');
 var path = require('path');
 
@@ -19,18 +20,20 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(express.cookieParser('your secret here'));
-app.use(express.session());
-app.use(app.router);
+app.use(require('morgan')('combined'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(require('method-override')());
+app.use(require('cookie-parser')());
+app.use(require('express-session')({
+  resave: false,
+  saveUninitialized: false,
+  secret: 'kattegatsecret'
+}));
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use("/bower_components", express.static(path.join(__dirname, 'bower_components')));
-app.use(express.errorHandler());
+app.use(require('errorhandler')());
 
 // Init Kattegat and create a server
 var kattegat = require("./index")(app, { debug: true });
