@@ -1,10 +1,10 @@
 {
   "name": "kattegat",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Kattegat middleware for Express 3.x",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -22,14 +22,14 @@
     "express-livereload": "0.0.24",
     "express-session": "^1.13.0",
     "jade": "1.11.0",
-    "lodash": "4.5.1",
+    "lodash": "4.6.1",
     "method-override": "^2.3.5",
-    "moment": "2.11.2",
+    "moment": "2.12.0",
     "morgan": "^1.7.0",
     "nedb": "1.8.0",
     "request": "2.69.0",
     "socket.io": "1.4.5",
-    "stylus": "0.53.0"
+    "stylus": "0.54.2"
   },
   "engines": {
     "node": ">=0.8.0"

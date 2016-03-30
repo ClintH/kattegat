@@ -2,11 +2,7 @@
 
 This is a test app for booting the Kattegat middleware.
 
-Use the kattegat yeoman generator to generate your own app.
-	1. npm install -g yo
-	2. yo kattegat
-	3. *presto!*
-
+Start with `npm start`
 */
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -17,8 +13,11 @@ var path = require('path');
 // 		For help customising the app server,
 // 		see the Express docs: http://expressjs.com/
 var app = express();
+
+var resourcesBasePath = __dirname;
+
 app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(resourcesBasePath, 'views'));
 app.set('view engine', 'jade');
 app.use(require('morgan')('combined'));
 app.use(bodyParser.json());
@@ -30,9 +29,10 @@ app.use(require('express-session')({
   saveUninitialized: false,
   secret: 'kattegatsecret'
 }));
-app.use(require('stylus').middleware(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use("/bower_components", express.static(path.join(__dirname, 'bower_components')));
+
+app.use(require('stylus').middleware(path.join(resourcesBasePath, 'public')));
+app.use(express.static(path.join(resourcesBasePath, 'public')));
+app.use("/bower_components", express.static(path.join(resourcesBasePath, 'bower_components')));
 app.use(require('errorhandler')());
 
 // Init Kattegat and create a server
