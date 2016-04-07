@@ -21,7 +21,7 @@ app.set('views', path.join(resourcesBasePath, 'views'));
 app.set('view engine', 'jade');
 app.use(require('morgan')('combined'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(require('method-override')());
 app.use(require('cookie-parser')());
 app.use(require('express-session')({
