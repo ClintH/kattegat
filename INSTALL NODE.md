@@ -13,18 +13,15 @@ There are instructions for installing Node.js for Mac OS X and Windows (at the b
 	`xcode-select --install`
 6. Install nvm by pasting the following text and pressing ENTER:
 
-	`curl https://raw.githubusercontent.com/creationix/nvm/v0.22.0/install.sh | bash`
+	`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
 
 7. Close Terminal and open it again, as instructed by the nvm installer
 8. Test that nvm is working by typing `nvm` followed by ENTER. You should see a bunch of text. Mac users: If you get an error "Command not found", please jump to the section below and then come back and continue.
 9. Install the latest stable version of Node.js. Paste the following and press ENTER:
 
-	`nvm install stable`
-10. Instruct nvm to use the stable version. Paste the following and press ENTER. (nvm allows you to switch between different versions of Node)
+	`nvm install v5.0`
 
-	`nvm alias default stable`
-
-11. Test that Node is working by typing `node --version` and pressing ENTER. You should see a version number printed.
+10. Test that Node is working by typing `node --version` and pressing ENTER. You should see a version number printed.
 12. Success! Now you can continue with the rest of the install steps.
 
 If you need to remove Node.js run `nvm uninstall stable`. If that doesn't work you can manually remove it [by following these instructions](https://gist.github.com/ddo/668630454ea0d74fdc21).
