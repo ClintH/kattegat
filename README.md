@@ -24,5 +24,6 @@ Read the [Getting Started](https://github.com/ClintH/kattegat/blob/master/INSTAL
 # Read more
 * [API documentation](https://github.com/ClintH/kattegat/blob/master/API.md)
 * [Deploying a sketch to Firebase](https://github.com/ClintH/kattegat/blob/master/DEPLOYING.md)
+* [Tracking interaction with Google Analytics](https://github.com/ClintH/kattegat/blob/master/ANALYTICS.md)
 * [Advanced topics](https://github.com/ClintH/kattegat/blob/master/DOCS.md)
 * [Updating Kattegat](https://github.com/ClintH/kattegat/blob/master/INSTALL.md#updating") guide

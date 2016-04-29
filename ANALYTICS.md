@@ -1,7 +1,6 @@
 # Google Analytics
 
-Using a tool like Google Analytics (GA) can be a useful way of tracking how a prototype is used.
-
+A tool like Google Analytics (GA) can be a useful to tracking how a prototype is used.
 
 # 1. Sign up
 
@@ -11,7 +10,9 @@ In the website URL, put in the URL you will access your code from, for example: 
 
 # 2. Add the tracking code
 
-Once created, you should be shown the "Tracking Code" for the property you created. You can find this again via _Admin - Tracking Info - Tracking Code_.
+Once created, you should be shown the "Tracking Code" for the property you created.
+
+_Tip:_ You can find this again via _Admin - Tracking Info - Tracking Code_.
 
 You'll see the _Tracking ID_ in big letters, something like `UA-1234678-2`. You'll also see a snippet of Javascript code in the _Website tracking_ box. Copy the whole contents (including the `<script>` tags), and paste into the bottom of your `index.html` page, before the closing `</body>` tag.
 
@@ -19,7 +20,7 @@ Save, and test that it works. If you visit the "Real Time" Reporting section of 
 
 _Tip:_ Ensure you have disabled any ad blocker type browser extensions as they can prevent the tracking from working.
 
-You can [read more here](https://developers.google.com/analytics/devguides/collection/analyticsjs/)
+[Read more about adding analytics code](https://developers.google.com/analytics/devguides/collection/analyticsjs/)
 
 # 3. Track an event
 
@@ -40,15 +41,15 @@ $('#btn').on('click', function(e) {
 })
 ```
 
-We use the `ga` function which is provided to us by Google Analytics. The parameters should be self-explanatory, but please read Google's documentation for more information. Setting informative `eventCategory`, `eventAction` and `eventLabel` properties is important to differentiate user activity.
+We use the `ga` function, provided to us by Google Analytics. The parameters should be self-explanatory, but please read Google's documentation for more information. Setting informative `eventCategory`, `eventAction` and `eventLabel` properties is important to differentiate user activity. `hitType` you must leave as "event".
 
-If you test your button click, you should see the event under GA's _Real Time - Events_ section. It can take a little longer for data to show up in _Behaviour - Events_.
+If you try clicking your button, you should see the event under GA's _Real Time - Events_ section. It can take a little longer for data to show up in _Behaviour - Events_.
 
 Read more: [Tracking events](https://developers.google.com/analytics/devguides/collection/analyticsjs/events)
 
 # 4. Track timing
 
-Let's measure the interval between button presses, and send that timing information to GA. Assuming we have the same button in our HTML:
+Let's measure the interval between button presses and send that timing information to GA. Assuming we have the same button in our HTML:
 
 `<button id='btn'>Click me</button>`
 
@@ -62,6 +63,8 @@ var lastClick = performance.now();
 $('#btn').on('click', function(e) {
     // Calculate the difference, and round the number off
     var elapsedTime = Math.round(performance.now()- lastClick);
+
+    // Print it out for our own testing:
     console.log("Elapsed time: " + elapsedTime);
 
     // Send to GA
@@ -71,6 +74,8 @@ $('#btn').on('click', function(e) {
       timingVar: 'click',
       timingValue: elapsedTime
     });
+
+    // Keep track of the current time
     lastClick = performance.now();
 })
 ```
