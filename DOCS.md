@@ -21,8 +21,10 @@ The pre-installed libraries are:
 * [Leaflet](http://leafletjs.com/): Map rendering
 * [lodash](https://github.com/lodash/lodash): Utility functions
 * [Moment](http://momentjs.com/): Time and date manipulation
-* [PointerEvents polyfill](https://github.com/Polymer/PointerEvents): Mouse/stylus/touch event unifier
+* [PointerEvents polyfill](https://github.com/jquery/PEP): Mouse/stylus/touch event unifier
 * [PureCSS](http://purecss.io): Simple CSS reset
+* [Flot](http://www.flotcharts.org/) Data plot visualiser
+* [Smoothie](http://smoothiecharts.org/) Charting library for streaming data
 * [Tinycolor](https://github.com/bgrins/TinyColor): Colour manipulation
 * [Transit](http://ricostacruz.com/jquery.transit/): CSS animation
 
