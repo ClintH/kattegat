@@ -1,6 +1,8 @@
 This is a guide to deploying a Kattegat sketch to [Firebase](https://www.firebase.com/).
 
-Note that the 'realtime' features of Kattegat are not available. Instead, you'll need to use a service like [Pusher](http://pusher.io).
+Note that the 'realtime' features of Kattegat are not available. Instead, you'll need to use a service like:
+* [Pusher](http://pusher.io)
+* [PubNub](https://www.pubnub.com/)
 
 # 1. Set up and initial deploy
 
@@ -54,4 +56,26 @@ bower_components/libraries.js
 4. Save, redeploy to Firebase, and test again in Chrome. The page and your script should load without errors.
 
 Now you are set up to code and test with your Kattegat server, and push your code to Firebase when you want to deploy and test it remotely.
+
+# Alternatives to deploying
+
+You can also use a service like [localtunnel](http://localtunnel.me/) or [ngrok](https://ngrok.com/) to access your server remotely. This also has the advantage of wrapping the connection in SSL, allowing you to use APIs like `geolocation` and `getUserMedia` without a problem.
+
+Install localtunnel:
+
+```
+$ npm install -g localtunnel
+```
+
+Make sure your Kattegat server is running. It uses port 3000 by default.
+
+Start localtunnel when you like:
+
+```
+$ lt --port 3000
+```
+
+You'll get a URL back. This allows you to access your Kattegat sketches beyond your local network.
+
+
 
