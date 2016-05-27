@@ -44,3 +44,6 @@ Of course, you can always reference Javascript libraries hosted remotely, or by 
 # Getting fancy
 
 Under the hood, Kattegat is a full [Express](http://expressjs.com)-based server, so the sky is the limit. If you want to hack on that, start by looking at `BASE\app.js`.
+
+* [Take a look at Tom Igoe's Node.js samples](https://github.com/tigoe/NodeExamples)
+
