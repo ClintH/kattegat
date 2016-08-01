@@ -1,7 +1,7 @@
 {
   "name": "kattegat",
   "version": "0.1.5",
-  "description": "Kattegat middleware for Express 3.x",
+  "description": "Kattegat application server",
   "main": "app.js",
   "scripts": {
     "start": "node test.js"
