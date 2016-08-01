@@ -1,7 +1,7 @@
 {
   "name": "kattegat",
-  "version": "0.1.5",
-  "description": "Kattegat application server",
+  "version": "0.1.6",
+  "description": "Kattegat middleware",
   "main": "app.js",
   "scripts": {
     "start": "node test.js"
@@ -21,7 +21,6 @@
     "express": "4.13.4",
     "express-livereload": "0.0.24",
     "express-session": "^1.13.0",
-    "jade": "1.11.0",
     "lodash": "4.6.1",
     "method-override": "^2.3.5",
     "moment": "2.12.0",
