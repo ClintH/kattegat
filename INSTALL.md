@@ -97,7 +97,7 @@ $ cd c:\users\john\code\myapp\
 To start a server you've generated, you can use:
 
 ````
-$ node app
+$ npm start
 ````
 
 You have to be in your base directory already.
@@ -111,6 +111,19 @@ Once the server starts it will list some URLs you can use to access it. Copy and
 Tip: `http://127.0.0.1:3000/` is _always_ your local machine. If you are connected to a wired or wireless network, you'll probably see another URL printed. This is your _network address_, and is the URL you need to use if you want to access your server from another device on the same network.
 
 Tip: Keep an eye on the terminal where the server is running. It prints useful information about what your sketch is doing, and - rarely - it might crash and need restarting.
+
+## Accessing remotely
+
+If you want to access your sketches from another device or network, start your server with:
+
+```
+$ npm start tunnel
+```
+
+This will generate a new address, in which traffic is securely tunneled via [ngrok](https://ngrok.com).  This means that your sketches will be available beyond the network your device is on _and_ they will be accessible via https://. This is important because when running on a different device, some web APIs (such as geolocation) are only allowed when served via HTTPS.
+
+You should never need a tunnel if you are testing code with a browser running on the same machine you are running your Kattegat server on.
+
 
 # <a name="make-page"></a> Starter sketches
 

@@ -11,6 +11,7 @@ Please note that the server is not designed with any kind of access control. Use
 * Application server for serving static resources such as HTML, JS, CSS and images: Accessible from your own computer, or other devices on the same network
 * Includes the recent version of various client-side Javascript libraries (such as jQuery and lodash) to simplify development
 * Live reload for quick and easy experimentation with HTML, JS and CSS
+* Quick and easy HTTPS tunneling via ngrok 
 * Persistent storage of small amounts of data and basic query capabilities (via [nedb](https://github.com/louischatriot/nedb))
 * Simple realtime data exchange (via [Socket.io](http://socket.io)) between devices
 * Interact with motors, sensors etc with a [Tessel](http://tessel.io). Please see the companion project [kattegat-tessel](https://github.com/clinth/kattegat-tessel) for more.
