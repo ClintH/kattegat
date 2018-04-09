@@ -20,7 +20,7 @@ Save your HTML page, and test that it works by loading it from a local server. I
 
 _Tip:_ Ensure you have disabled any ad blocker type browser extensions as they can prevent the tracking from working.
 
-[Read more about adding analytics code](https://developers.google.com/analytics/devguides/collection/analyticsjs/)
+[Read more about adding analytics code](https://developers.google.com/analytics/devguides/collection/gtagjs/events)
 
 # 3. Track an event
 
@@ -32,22 +32,20 @@ In our Javascript, we could add:
 
 ```
 document.getElementById('btnTest').addEventListener('click', function(e) {
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'buttons',
-      eventAction: 'click',
-      eventLabel: 'Test button clicked'
+    gtag('event', 'action', {
+      event_category: 'buttons',
+      event_label: 'Test button clicked'
     });
 });
 ```
 
-Because the Google Analytics script was imported using the `SCRIPT` tag in our HTML page, we gain access to some additional functions. In these case, we use `ga`.
+Because the Google Analytics script was imported using the `SCRIPT` tag in our HTML page, we gain access to some additional functions. In these case, we use `gtag`.
 
-The parameters should be self-explanatory, but please read Google's documentation for more information. Setting informative `eventCategory`, `eventAction` and `eventLabel` properties is important to differentiate user activity. `hitType` you must leave as "event".
+The parameters should be self-explanatory, but please read Google's documentation for more information. Setting informative `event_category`, `event_action` and `value` properties is important to differentiate user activity. You must leave the `event` string as the first parameter.
 
 If you try clicking your button, you should see the event under GA's _Real Time - Events_ section. It can take a little longer for data to show up in _Behaviour - Events_.
 
-Read more: [Tracking events](https://developers.google.com/analytics/devguides/collection/analyticsjs/events)
+Read more: [Tracking events](https://developers.google.com/analytics/devguides/collection/gtagjs/events)
 
 # 4. Track timing
 
@@ -64,17 +62,16 @@ var lastClick = performance.now();
 // Handle the click event
 document.getElementById('btnTest').addEventListener('click', function(e) {
     // Calculate the difference, and round the number off
-    var elapsedTime = Math.round(performance.now()- lastClick);
+    var elapsedTime = Math.round(performance.now() - lastClick);
 
     // Print it out for our own testing:
     console.log("Elapsed time: " + elapsedTime);
 
     // Send to GA
-    ga('send', {
-      hitType: 'timing',
-      timingCategory: 'buttons',
-      timingVar: 'click',
-      timingValue: elapsedTime
+    gtag('event', 'timing_complete', {
+      name: 'buttons',
+      event_category: 'buttons',
+      value: elapsedTime
     });
 
     // Keep track of the current time
@@ -82,7 +79,7 @@ document.getElementById('btnTest').addEventListener('click', function(e) {
 });
 ```
 
-Read more: [Track User Timings](https://developers.google.com/analytics/devguides/collection/analyticsjs/user-timings)
+Read more: [Track User Timings](https://developers.google.com/analytics/devguides/collection/gtagjs/user-timings)
 
 You can see the gathered data in the GA dashboard under _Behaviour - Site Speed - User Timings_. The timing data doesn't show up as fast as the real time events, so don't be surprised if nothing immediately shows.
 
